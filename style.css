@@ -613,17 +613,56 @@ textarea {
   text-align: center;
 }
 
+/* จัดเนื้อหา hero เป็นคอลัมน์กึ่งกลางทุกชิ้น (ไม่พึ่ง margin auto) */
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .hero h1 {
-  margin-bottom: var(--space-3);
-  font-size: clamp(2.6rem, 8vw, 5.5rem);
-  line-height: 1.4; /* เผื่อพื้นที่วรรณยุกต์ภาษาไทย */
+  max-width: 14em;
+  margin: 0 0 var(--space-3);
+  font-size: clamp(2.6rem, 7.5vw, 5.25rem);
+  line-height: 1.15;
   font-weight: 400;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+
+/* เส้นทองบรอนซ์สั้นๆ คั่นหัวข้อกับข้อความ */
+.hero__rule {
+  display: block;
+  width: 3rem;
+  height: 1px;
+  margin-bottom: var(--space-4);
+  background: var(--bronze);
 }
 
 .hero .lead {
-  margin: 0 auto var(--space-5);
-  max-width: 30rem;
+  max-width: 34rem;
+  margin: 0 0 var(--space-5);
+  font-size: 1.25rem;
+  text-wrap: balance;
+}
+
+.hero .lead--tight {
+  margin-bottom: var(--space-2);
+}
+
+.hero .hero__text {
+  max-width: 32rem;
+  margin: 0 0 var(--space-5);
+  font-size: 0.95rem;
+}
+
+/* ปุ่มขนาดใหญ่ */
+.btn--large {
+  min-width: min(100%, 17rem);
+  padding: 1.3rem 3.5rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.04em;
 }
 
 /* การ์ด mood (ลิงก์ทั้งใบ) */
